@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.maindiv{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 55%;
+    margin-left: 300px;
+    margin-top: 50px;
+    
+}
+.formdiv {
+    padding-left: 0px;
+}
+.maindivone {
+    display: flex;
+    padding: 20px 30px;
+    font-size: medium;
+
+}
+.maindivtwo{
+    display: flex;
+    padding: 20px 30px;
+    font-size: medium;
+}
+.maindivthree{
+    display: flex;
+    padding: 20px 30px;
+    font-size: medium;
+
+}
+.lastnamediv{
+    padding: 0px 30px;
+}
+.emaildiv{
+    padding:  0px 30px;
+}
+.conformpassworddiv{
+    padding:  0px 30px;
+
+}
+.editbuttoncss{
+    background-color: rgb(40, 173, 235);
+    color: white;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+   
+ 
+}
+.savebuttoncss{
+    background-color: rgb(40, 173, 235);
+    color: white;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+ 
+
+}
+.deletebuttoncss{
+    background-color: rgb(40, 173, 235);
+    color: white;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+
+}
+.button{
+    margin-left: 115px;
+    padding:8px 68px; 
+    margin-top: 30px;
+    background-color: rgb(40, 173, 235);
+    color: white;
+    border: none;
+}
+/* .imagediv img{
+    width: 200%;
+    margin-right: 10px;
+ 
+   
+} */
+
+.name{
+    padding: 50px 0px;
+}
+.box{
+    padding: 5px;
+    margin-top: 10px;
+}
+.checkbox{
+    padding: 20px 30px;
+}
+.checkboxtwo{
+    margin-left: 10px;
+}
+.imagediv{
+    width: 300px;
+    height: 477px;
+    background-color: violet;
+}
+.imagediv img{
+    height: 477px;
+}
+.details{
+    display: flex;
+    padding: 20px 0px 0px 0px;
+   
+}
+.firstnameone{
+    margin-left: 45px;
+}
+.lastnametwo{
+    margin-left: 115px;
+}
+.phonethree{
+    margin-left: 115px;
+}
+.emailfour{
+    margin-left: 135px;
+}
+.passwordfive{
+    margin-left: 120px;
+}
+.conformpasswordsix{
+    margin-left: 78px;
+}

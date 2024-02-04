@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form done by using javascript done SREEJITH</title>
+ <link rel="stylesheet" href="./layers/css/form.css">
+ <link rel="shortcut icon" href="./layers/images/form logo.png" type="image/x-icon">
+
+
+ 
+
+
+
+</head>
+<body>
+    
+    <div class="maindiv">
+       
+        
+        <div class="imagediv">
+            <img src="./layers/images/dhoni image.jpg" alt="">
+    
+        </div>
+        <div class="formdiv" >
+
+         
+                <h1 >
+                    Sign Up
+                </h1>
+                <div class="maindivone">
+                    <div class="namediv">
+                        <label>First name</label> <br>
+                    <input type="text" placeholder=" Type name" class="box name " id="Firstname">
+            
+                    </div>
+                    <div class="lastnamediv">
+                        <label> Last name</label><br>
+                        <input type="text"placeholder ="Type name"class="box name2" id="secondname">                        
+            
+                    </div>
+        
+
+                </div>
+                <div class="maindivtwo">
+                    <div class="phonediv">
+                        <label > Phone </label><br>
+                        <input type="number" placeholder="Type moblie number"class="box phone" id="phone">
+                        
+            
+                    </div>
+                    <div class="emaildiv">
+                        <label for=""> Email</label><br>
+                        <input type="email" placeholder="Type mail id"class="box email" id="email">
+                    </div>
+        
+                </div>
+                <div class="maindivthree">
+                    <div class="passworddiv">
+                        <label for="">Password</label><br>
+                        <input type="text" placeholder="Type password"class="box password" id="password">
+                    </div>
+                    <div class="conformpassworddiv">
+                        <label for="">Conform Password</label><br>
+                    <input type="text" placeholder="Type password"class="box conformpassword" id="conformpassword">
+            
+                    </div>
+                    
+        
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" class="checkboxone">
+                   
+                    <label for=""> I accept terms and condititons</label>
+                    <input type="checkbox" class="checkboxtwo">
+                    <label for=""> I want to receive News</label>
+                  
+                   
+
+                </div>
+                <button class="button">
+                    Sign Up
+                </button>   
+                
+                
+              
+               
+                
+  
+    
+        </div>
+
+    </div>
+    <div>
+        <div class="details">
+
+            <div class="firstnameone">
+                <p>First Name</p>
+
+            </div>
+            <div class="lastnametwo">
+                <p>Last Name</p>
+
+            </div>
+            <div class="phonethree">
+                <p>Phone</p>
+
+            </div>
+            <div class="emailfour">
+              <p>Email</p>
+
+            </div>
+            <div class="passwordfive" >
+                <p>Password</p>
+
+            </div>
+            <div class="conformpasswordsix">
+                <p>Conformpassword</p>
+
+            </div>
+      
+        </div>
+        <div  id="datadiv">
+
+        </div>
+       
+
+    </div>  
+    
+    <script>
+        let firstname = document.getElementById("Firstname");
+        let  secondname = document.getElementById("secondname");
+        let phone = document.getElementById("phone");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let conformpassword= document.getElementById("conformpassword");
+        let button= document.querySelector("button");
+        let datadiv= document.getElementById("datadiv");
+        button.addEventListener("click",function crudoperationprogram(){
+            let newdiv = document.createElement("div");
+            datadiv.appendChild(newdiv);
+
+
+            let newinputtagforfirstname = document.createElement("input");
+            newinputtagforfirstname.value = firstname.value
+            newinputtagforfirstname.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforfirstname)
+
+            let newinputtagforsecondname = document.createElement("input");
+            newinputtagforsecondname.value = secondname.value
+            newinputtagforsecondname.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforsecondname)
+            
+            let newinputtagforphone = document.createElement("input");
+            newinputtagforphone.value = phone.value
+            newinputtagforphone.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforphone)
+
+            let newinputtagforemail= document.createElement("input");
+            newinputtagforemail.value = email.value
+            newinputtagforemail.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforemail)
+
+            let newinputtagforpassword= document.createElement("input");
+            newinputtagforpassword.value = password.value
+            newinputtagforpassword.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforpassword)
+
+            let newinputtagforconformpassword= document.createElement("input");
+            newinputtagforconformpassword.value = conformpassword.value
+            newinputtagforconformpassword.setAttribute("readonly" ,"readonly")
+            newdiv.appendChild(newinputtagforconformpassword)
+
+
+
+
+
+            let deletebutton = document.createElement ("button");
+            deletebutton.innerHTML ="delete";
+            deletebutton.classList.add("deletebuttoncss")
+            newdiv.appendChild(deletebutton);
+
+            deletebutton.addEventListener("click",()=>{
+                newdiv.style.display="none";
+
+            })
+
+          
+
+            let editbutton = document.createElement ("button");
+            editbutton.innerHTML ="edit";
+            editbutton.classList.add("editbuttoncss")
+            newdiv.appendChild(editbutton);
+
+            editbutton.addEventListener("click",()=>{
+                newinputtagforfirstname.removeAttribute("readonly","readonly")
+                newinputtagforsecondname.removeAttribute("readonly","readonly")
+                newinputtagforphone.removeAttribute("readonly","readonly")
+                newinputtagforemail.removeAttribute("readonly","readonly")
+                newinputtagforpassword.removeAttribute("readonly","readonly")
+                newinputtagforconformpassword.removeAttribute("readonly","readonly")
+                
+            })
+ 
+
+            let savebutton = document.createElement ("button");
+            savebutton.innerHTML ="save";
+            savebutton.classList.add("savebuttoncss")
+            newdiv.appendChild(savebutton);
+
+            savebutton.addEventListener("click",()=>{
+                newinputtagforfirstname.setAttribute("readonly","readonly")
+                newinputtagforsecondname.setAttribute("readonly","readonly")
+                newinputtagforphone.setAttribute("readonly","readonly")
+                newinputtagforemail.setAttribute("readonly","readonly")
+                newinputtagforpassword.setAttribute("readonly","readonly")
+                newinputtagforconformpassword.setAttribute("readonly","readonly")
+                
+            })
+
+
+
+
+        })
+ 
+    </script>   
+    
+</body>
+</html>
